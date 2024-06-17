@@ -1,0 +1,48 @@
+tree is non-linear data structure, which store in hierarchical manner
+
+              root
+        /       |       \
+        child1  child2   child3
+
+node -> item of tree
+root -> top node (which don't have any parent node)
+leaf -> bottom most node (which don't have any child node)
+subtree -> tree self contains many tree called sub-tree
+descendants -> all item below the item are there descendants
+degree -> number of child is degree of a node
+---------------------------------------------------------------------------
+
+APPLICATION =>
+
+1> to represent hierarchical data
+  a> Organization structure
+  b> folder structure
+  c> xml/html/json content
+  d> in OOPs (Inheritance)
+2> Binary search tree
+3> binary heap (use in priority queue)
+4> B and B+ tree in DBMS
+5> spanning and shortest path tree in computer network
+6> parse and expression tree in compiler
+
+---------------------------------------------------------------------------
+
+Binary Tree => tree which has at most 2 degree
+
+---------------------------------------------------------------------------
+
+TREE TRAVERSAL => 
+
+1> Breath First -> traver level by level from left to right
+
+2> Depth First -> travel to root and then left subtree and right subtree 
+{ space: O(h), time: theta(n) } where n = number of nodes, h = longest distance from root to leaf
+
+  a> Inorder -> Left Root Right, 
+  b> Preorder -> Root Left Right
+  c> Postorder -> Left Right Root
+
+---------------------------------------------------------------------------
+
+Height of Tree => longest distance from root to leaf { space: O(h), time: theta(n) }
+
