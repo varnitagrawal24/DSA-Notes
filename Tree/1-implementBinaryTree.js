@@ -84,4 +84,21 @@ export class BinaryTree{
         const result = getHeight(this.root);
         return result;
     }
+
+    kthNodes(k){
+        //Time Complexity: O(n) where n is number of nodes in the given binary tree.
+        // Space Complexity : O(height of the binary tree).
+        
+        const resultNodes = [];
+        function getKthNodes(root, tempK){
+            if(root === null) return;
+            if(tempK === 0) resultNodes.push(root.data);
+            else {
+                getKthNodes(root.left, tempK - 1);
+                getKthNodes(root.right, tempK - 1);
+            }
+        };
+        getKthNodes(this.root, k);
+        return resultNodes.filter(Boolean);
+    };
 }
