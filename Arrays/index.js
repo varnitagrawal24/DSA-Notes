@@ -50,3 +50,50 @@ const checkArraySorted = (arrayItem = []) => {
     }
     return true;
 }
+
+// reverse an array
+const reverseArray = (arrayItem = []) => {
+    let first = 0;
+    let last = arrayItem.length - 1;
+    while(first < last) {
+        const a = arrayItem[first];
+        arrayItem[first] = arrayItem[last]
+        arrayItem[last] = a;
+        first++;
+        last--;
+    }
+    return arrayItem
+}
+
+// remove duplicate from array
+
+const removeDuplicateFromArray = (arrayItem = []) => {
+    let i = 0
+    let result = []
+    while(i<arrayItem.length){
+        if(arrayItem[i] !== arrayItem[i+1]) result.push(arrayItem[i])
+        i++
+    }
+    return result
+}
+
+// all zero at last of array
+
+const moveZeroToLast = (item = []) => {
+    let c = 0;
+    const n = item.length
+
+    for(let i = 0; i< n; i++){
+        if(item[i] !== 0){
+            item[c] = item[i];
+            c++;
+        }
+    }
+    while(c<n){
+        item[c] = 0
+        c++
+    }
+    return item
+}
+
+console.log(moveZeroToLast([0,2, 0, 5]));
